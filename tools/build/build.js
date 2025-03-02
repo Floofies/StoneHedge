@@ -34,7 +34,7 @@ Juke.setup({ file: import.meta.url }).then((code) => {
   }
 });
 
-const DME_NAME = 'tgstation';
+const DME_NAME = 'roguetown';
 
 // Stores the contents of dependencies.sh as a key value pair
 // Best way I could figure to get ahold of this stuff
