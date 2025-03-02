@@ -2,6 +2,9 @@
 	if(!key)
 		return
 	var/the_pq = 0
+	// Bluemoon edit - Unlimited Player Quality
+	the_pq = 99999
+	/*
 	var/json_file = file("data/player_saves/[copytext(key,1,2)]/[key]/pq_num.json")
 	if(!fexists(json_file))
 		WRITE_FILE(json_file, "{}")
@@ -11,6 +14,7 @@
 		the_pq = json[ckey(key)]
 	if(!the_pq)
 		the_pq = 0
+	*/
 	if(!text)
 		return the_pq
 	else
