@@ -1,13 +1,21 @@
+/* Bluemoon edit -  Reload whitelist when changed
+Original:
 #ifdef TESTSERVER
 	#define WHITELISTFILE	"[global.config.directory]/roguetown/wl_test.txt"
 #else
 	#define WHITELISTFILE	"[global.config.directory]/whitelist.txt"
 #endif
+*/
+#define WHITELISTFILE	"[global.config.directory]/whitelist.txt"
 
 GLOBAL_LIST_EMPTY(whitelist)
 GLOBAL_PROTECT(whitelist)
 
+// Bluemoon edit -  Reload whitelist when changed
+var/whitelist_modtime = 0
 /proc/load_whitelist()
+	// Bluemoon edit -  Reload whitelist when changed
+	whitelist_modtime = ftime(WHITELISTFILE)
 	GLOB.whitelist = list()
 	for(var/line in world.file2list(WHITELISTFILE))
 		if(!line)
@@ -17,12 +25,10 @@ GLOBAL_PROTECT(whitelist)
 		GLOB.whitelist += ckey(line)
 
 /proc/check_whitelist(ckey)
-	if(!GLOB.whitelist || !GLOB.whitelist.len)
+	// Bluemoon edit -  Reload whitelist when changed
+	if(ftime(WHITELISTFILE) != whitelist_modtime)
 		load_whitelist()
-#ifdef TESTSERVER
-	var/plevel = check_patreon_lvl(ckey)
-	if(plevel >= 3)
-		return TRUE
-#endif
+	if(!GLOB.whitelist)
+		return FALSE
 	return (ckey in GLOB.whitelist)
 #undef WHITELISTFILE
