@@ -51,7 +51,7 @@
 		qdel(src)
 		return
 	
-	if(amount > 4 MINUTES)
+	if(amount > 10 MINUTES) //screw it we're just making it over twice the wait
 		if(is_zombie)
 			var/datum/antagonist/zombie/Z = C.mind.has_antag_datum(/datum/antagonist/zombie)
 			if(Z && !Z.has_turned && !Z.revived && C.stat == DEAD)
@@ -63,13 +63,13 @@
 	for(var/obj/item/bodypart/B in C.bodyparts)
 		if(!B.skeletonized && B.is_organic_limb())
 			if(!B.rotted)
-				if(amount > 10 MINUTES)
+				if(amount > 20 MINUTES)
 					B.rotted = TRUE
 					findonerotten = TRUE
 					shouldupdate = TRUE
 					C.change_stat("constitution", -8, "rottenlimbs")
 			else
-				if(amount > 25 MINUTES)
+				if(amount > 30 MINUTES)
 					if(!is_zombie)
 						if(C.dna && C.dna.species)
 							C.dna.species.species_traits |= NOBLOOD
@@ -77,7 +77,7 @@
 						shouldupdate = TRUE
 				else
 					findonerotten = TRUE
-		if(amount > 35 MINUTES)
+		if(amount > 40 MINUTES)
 			if(!is_zombie)
 				if(B.skeletonized)
 					if(!B.owner.client) //so cliented mfers dont get dusted.

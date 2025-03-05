@@ -47,7 +47,7 @@
 	if(handcuffed || legcuffed || lying)
 		return
 	if(sexcon && !chasesfuck)
-		for(var/mob/living/carbon/human/fucktarg in oview(aggro_vision_range, 1))
+		for(var/mob/living/carbon/human/fucktarg in oview(aggro_vision_range, src))
 			if(fucktarg == src)
 				continue
 			if(!aggressive && fucktarg.cmode) //skip if the target has cmode on and the mob is not aggressive.
@@ -98,7 +98,7 @@
 		return
 	var/mob/living/carbon/human/L
 	var/list/foundfuckmeat = list()
-	for(var/mob/living/carbon/human/fucktarg in oview(aggro_vision_range, 1))
+	for(var/mob/living/carbon/human/fucktarg in oview(aggro_vision_range, src))
 		if(fucktarg.has_quirk(/datum/quirk/monsterhuntermale) || fucktarg.has_quirk(/datum/quirk/monsterhunterfemale))
 			foundfuckmeat += fucktarg
 		if(foundfuckmeat.len)
@@ -269,7 +269,7 @@
 		seeklewd()
 	if(seekboredom > 25) //give up after a while and go dormant again, this should also help them get unstuck.
 		stoppedfucking(timedout = TRUE)
-	if(chasesfuck) //we are outta here due pain.
+	if(mode == AI_FLEE && chasesfuck) //we are outta here.
 		stoppedfucking(timedout = TRUE)
 
 /mob/living/carbon/human/proc/seeklewd()

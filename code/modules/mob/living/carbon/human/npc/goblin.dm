@@ -15,7 +15,9 @@
 	erpable = TRUE
 	hornychance = 50
 	//If someone ends up writing custom messages for goblins, lewd talk could be used ig -vide
-	//lewd_talk = TRUE
+	lewd_talk = TRUE //lets the lewdai advert their horniness.
+	male_lewdtalk = list("") //add dialogue at some point. With this, gobs won't say anything but will physically show interest
+	female_lewdtalk = list("")
 	//skin color is "e8b59b"
 	show_genitals = TRUE  //would be good but colors just wont work.
 	skin_tone = "e8b59b"
@@ -579,6 +581,8 @@
 		return
 	if(gobs >= (maxgobs+1))
 		to_chat(user, span_danger("Too many Gobs."))
+		return
+	if(alert("Are you sure you want to become an invading goblin? You may not be able to return to your body.",,"Yes","No")!="Yes")
 		return
 	gobs++
 	var/mob/living/carbon/human/species/goblin/npc/N = new (get_turf(src))

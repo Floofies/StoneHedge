@@ -1,6 +1,7 @@
 
 
 //these mobs run away when attacked
+#define MAX_RANGE_FIND 32
 /mob/living/simple_animal/hostile/retaliate/rogue
 	turns_per_move = 5
 	see_in_dark = 6
@@ -39,6 +40,8 @@
 	var/deaggroprob = 10
 	var/eat_forever
 	candodge = TRUE
+	var/list/myPath = list() //for pathfinding
+	var/maxStepsTick = 6 //ditto
 
 
 /mob/living/simple_animal/hostile/retaliate/rogue/apply_damage(damage = 0,damagetype = BRUTE, def_zone = null, blocked = FALSE, forced = FALSE)
@@ -270,3 +273,41 @@
 		stop_automated_movement = TRUE
 		Goto(user,move_to_delay)
 		addtimer(CALLBACK(src, PROC_REF(return_action)), 3 SECONDS)
+
+	//pathfinding shenanegains
+/mob/living/simple_animal/hostile/retaliate/rogue/proc/walk2derpless(target)
+//code stolen from carbon/human/interactive
+	if(!target)
+		return 0
+
+	if(myPath.len <= 0)
+		myPath = get_path_to(src, get_turf(target), /turf/proc/Distance, MAX_RANGE_FIND + 1, 250,1)
+
+	if(myPath)
+		if(myPath.len > 0)
+			for(var/i = 0; i < maxStepsTick; ++i)
+				if(!IsDeadOrIncap())
+					if(myPath.len >= 1)
+						walk_to(src,myPath[1],0,5)
+						myPath -= myPath[1]
+			return 1
+
+	// failed to path correctly so just try to head straight for a bit
+	walk_to(src,get_turf(target),0,5)
+	sleep(1)
+	walk_to(src,0)
+
+	return 0
+
+/mob/living/simple_animal/hostile/retaliate/rogue/proc/IsDeadOrIncap(checkDead = TRUE)
+	if(!(mobility_flags & MOBILITY_FLAGS_INTERACTION))
+		return 1
+	if(health <= 0 && checkDead)
+		return 1
+	if(IsUnconscious())
+		return 1
+	if(IsStun() || IsParalyzed())
+		return 1
+	if(stat)
+		return 1
+	return 0
