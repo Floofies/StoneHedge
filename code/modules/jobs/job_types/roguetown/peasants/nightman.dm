@@ -59,7 +59,7 @@
 				shoes = /obj/item/clothing/shoes/roguetown/sandals
 				armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/strapless/random
 				wrists = /obj/item/clothing/neck/roguetown/psicross/eora
-				head  = /obj/item/clothing/head/peaceflower
+				// Bluemoon edit - Removed conditional forced peaceflower equip: head = /obj/item/clothing/head/peaceflower
 			else
 				armor = /obj/item/clothing/suit/roguetown/armor/armordress/alt
 				shoes = /obj/item/clothing/shoes/roguetown/shortboots
