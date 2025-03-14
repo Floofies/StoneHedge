@@ -1,0 +1,6 @@
+#define TRAIT_SKILLBOOKED_STR "skillbooked_str"
+#define TRAIT_SKILLBOOKED_PER "skillbooked_per"
+#define TRAIT_SKILLBOOKED_INT "skillbooked_int"
+#define TRAIT_SKILLBOOKED_CON "skillbooked_con"
+#define TRAIT_SKILLBOOKED_END "skillbooked_end"
+#define TRAIT_SKILLBOOKED_SPD "skillbooked_spd"
