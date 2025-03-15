@@ -198,6 +198,13 @@ SUBSYSTEM_DEF(ticker)
 			//countdown
 			if(timeLeft < 0)
 				return
+			// Bluemoon edit - Stop lobby timer without ready players
+			if(totalPlayersReady)
+				timeLeft -= wait
+				if(timeLeft <= 300 && !tipped)
+					send_tip_of_the_round()
+					tipped = TRUE
+			/*
 			timeLeft -= wait
 
 			if(timeLeft <= 300 && !tipped)
@@ -205,6 +212,7 @@ SUBSYSTEM_DEF(ticker)
 				send_tip_of_the_round()
 #endif
 				tipped = TRUE
+			*/
 
 			if(timeLeft <= 0)
 				if(!checkreqroles())
