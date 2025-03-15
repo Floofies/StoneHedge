@@ -154,7 +154,7 @@
 
 #define DEFAULT_PENIS_SIZE 2
 #define MIN_PENIS_SIZE 1
-#define MAX_PENIS_SIZE 3 //5 available, above 3 are HYPER.
+#define MAX_PENIS_SIZE 5 //5 available, above 3 are HYPER. + BLUEMOON EDIT: Less limited character customization (Limit raised from 3 to 5)
 #define TOTAL_PENIS_SIZE 5
 
 #define PENIS_TYPE_PLAIN 1
@@ -177,7 +177,7 @@
 
 #define DEFAULT_TESTICLES_SIZE 3
 #define MIN_TESTICLES_SIZE 1
-#define MAX_TESTICLES_SIZE 3 //5 available, above 3 are hyper and are not selectable but used for potion effect.
+#define MAX_TESTICLES_SIZE 5 //5 available, above 3 are hyper and are not selectable but used for potion effect. + BLUEMOON EDIT: Less limited character customization (Limit raised from 3 to 5)
 #define TOTAL_TESTICLES_SIZE 5
 
 #define DEFAULT_BELLY_SIZE 0
@@ -186,10 +186,10 @@
 
 #define DEFAULT_BREASTS_SIZE 3
 #define MIN_BREASTS_SIZE 0
-#define MAX_BREASTS_SIZE 13 //16 available, above 13 is hyper-er.
+#define MAX_BREASTS_SIZE 16 //16 available, above 13 is hyper-er. + BLUEMOON EDIT: Less limited character customization (Limit raised from 13 to 16)
 #define TOTAL_BREASTS_SIZE 16
 
 #define DEFAULT_BUTT_SIZE 0
 #define MIN_BUTT_SIZE 0
-#define MAX_BUTT_SIZE 4 //5 available, above 4 may be too big.
+#define MAX_BUTT_SIZE 5 //5 available, above 4 may be too big. + BLUEMOON EDIT: Less limited character customization (Limit raised from 4 to 5)
 #define TOTAL_BUTT_SIZE 5

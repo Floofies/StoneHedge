@@ -130,21 +130,23 @@
 			if(ownerussy.getorganslot(ORGAN_SLOT_PENIS) || salami)
 				var/obj/item/organ/penis/ownerussypenis = ownerussy.getorganslot(ORGAN_SLOT_PENIS)
 				if (ownerussypenis)
-					bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.uns_named_penis_sizes, ownerussypenis.organ_size+penisAdd)] penis."
+				// BLUEMOON EDIT: Less limited character customization (Replaced all mention of "uns_named_xxx_sizes" with "named_xxx_sizes")
+					bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.named_penis_sizes, ownerussypenis.organ_size+penisAdd)] penis."
 				else
-					bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.uns_named_penis_sizes, 1)] penis."
+					bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.named_penis_sizes, 1)] penis."
 			if(ownerussy.getorganslot(ORGAN_SLOT_TESTICLES))
 				var/obj/item/organ/filling_organ/testicles/ownerussyballs = ownerussy.getorganslot(ORGAN_SLOT_TESTICLES)
-				bodypart_status += "[ownerussy] has [find_key_by_value(GLOB.uns_named_ball_sizes, ownerussyballs.organ_size)] testicles."
+				bodypart_status += "[ownerussy] has [find_key_by_value(GLOB.uns_named_ball_sizes, ownerussyballs.organ_size)] testicles." //BLUEMOON NOTE: This particular variable has to remain unchanged due to a weird interaction with... salami
 			if(ownerussy.getorganslot(ORGAN_SLOT_BREASTS))
 				var/obj/item/organ/filling_organ/breasts/ownerussybreasts = ownerussy.getorganslot(ORGAN_SLOT_BREASTS)
-				bodypart_status += "[ownerussy] has [find_key_by_value(GLOB.uns_named_breast_sizes, ownerussybreasts.organ_size)] breasts."
+				bodypart_status += "[ownerussy] has [find_key_by_value(GLOB.named_breast_sizes, ownerussybreasts.organ_size)] breasts."
 			if(ownerussy.getorganslot(ORGAN_SLOT_BELLY))
 				var/obj/item/organ/belly/ownerussybelly = ownerussy.getorganslot(ORGAN_SLOT_BELLY)
-				bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.named_belly_sizes, ownerussybelly.organ_size)] belly."
+				bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.named_belly_sizes, ownerussybelly.organ_size)] belly." //BLUEMOON NOTE: This is unchanged because "uns_named_belly_sizes" never existed in the first place
 			if(ownerussy.getorganslot(ORGAN_SLOT_BUTT))
 				var/obj/item/organ/butt/ownerussybutt = ownerussy.getorganslot(ORGAN_SLOT_BUTT)
-				bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.uns_named_butt_sizes, ownerussybutt.organ_size)] butt."
+				bodypart_status += "[ownerussy] has a [find_key_by_value(GLOB.named_butt_sizes, ownerussybutt.organ_size)] butt."
+				// BLUEMOON EDIT END
 			if(ownerussy.getorganslot(ORGAN_SLOT_VAGINA))
 				bodypart_status += "[ownerussy] has a vagina."
 
