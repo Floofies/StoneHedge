@@ -2,6 +2,10 @@ GLOBAL_LIST_INIT(named_penis_sizes, list(
 	"small" = 1,
 	"average" = 2,
 	"large" = 3,
+	// BLUEMOON EDIT: Less limited character customization
+	"massive" = 4,
+	"enormous" = 5,
+	// BLUEMOON EDIT END
 ))
 
 //unselectables included.
@@ -18,6 +22,10 @@ GLOBAL_LIST_INIT(named_ball_sizes, list(
 	"small" = 1,
 	"average" = 2,
 	"large" = 3,
+	// BLUEMOON EDIT: Less limited character customization (size 6 was omitted due to the above comment)
+	"massive" = 4,
+	"enormous" = 5,
+	// BLUEMOON EDIT END
 ))
 
 //unselectables included.
@@ -45,6 +53,11 @@ GLOBAL_LIST_INIT(named_breast_sizes, list(
 	"titanic" = 11,
 	"gargantuan" = 12,
 	"colossal" = 13,
+	// BLUEMOON EDIT: Less limited character customization
+	"unbelieveably big" = 14,
+	"godly big" = 15,
+	"ungodly big" = 16,
+	// BLUEMOON EDIT END
 ))
 
 //unselectables included.
@@ -82,6 +95,7 @@ GLOBAL_LIST_INIT(named_butt_sizes, list(
 	"medium" = 2,
 	"large" = 3,
 	"massive" = 4,
+	"enormous" = 5, // BLUEMOON EDIT: Less limited character customization
 ))
 
 //unselectables included.
