@@ -8,7 +8,6 @@ GLOBAL_LIST_INIT(named_penis_sizes, list(
 	// BLUEMOON EDIT END
 ))
 
-//BLUEMOON NOTE: Most "uns_named_xxx_sizes" lists are unused due to edits elsewhere, but it's -probably- better to keep them uncommonted for modularity's sake
 //unselectables included.
 GLOBAL_LIST_INIT(uns_named_penis_sizes, list(
 	"small" = 1,
