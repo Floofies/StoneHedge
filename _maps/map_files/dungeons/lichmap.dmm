@@ -1345,11 +1345,6 @@
 	},
 /turf/open/floor/fakespace,
 /area/rogue/under/cavewet)
-"lX" = (
-/obj/structure/fluff/statue/knight/interior,
-/mob/living/simple_animal/hostile/retaliate/rogue/troll/blood,
-/turf/open/floor/rogue/churchmarble,
-/area/rogue/under/cavewet)
 "ma" = (
 /turf/closed/wall/mineral/rogue/decostone/cand,
 /area/rogue/under/cavewet)
@@ -2666,10 +2661,6 @@
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
-"xO" = (
-/mob/living/simple_animal/hostile/retaliate/rogue/troll/blood,
-/turf/open/floor/rogue/churchmarble,
-/area/rogue/under/cavewet)
 "xV" = (
 /obj/structure/fluff/wallclock/l,
 /obj/machinery/light/rogue/firebowl/standing,
@@ -4917,7 +4908,6 @@
 /area/rogue/outdoors)
 "Ru" = (
 /obj/structure/fluff/statue/knight/interior/r,
-/mob/living/simple_animal/hostile/retaliate/rogue/troll/blood,
 /obj/effect/decal/cleanable/blood/bubblegum,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cavewet)
@@ -12259,7 +12249,7 @@ cw
 xf
 cw
 cw
-xO
+cw
 gK
 Nl
 sr
@@ -12488,7 +12478,7 @@ ti
 ti
 cw
 cw
-lX
+HD
 lL
 SG
 ti
@@ -13085,7 +13075,7 @@ cw
 cw
 cw
 cw
-xO
+cw
 gK
 Nl
 sr
