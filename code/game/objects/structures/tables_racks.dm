@@ -313,13 +313,21 @@
 	smooth = 0
 	climb_offset = 10
 
-/obj/structure/table/wood/crafted/Initialize()
-	. = ..()
-	icon_state = pick("tablewood2", "tablewood1")
+/obj/structure/table/wood/crafted
+	icon_state = "tablewood1"
+
+/obj/structure/table/wood/craftedmoss
+	icon_state = "tablewood2"
+
+/obj/structure/table/wood/craftedslab
+	icon_state = "tablewood3"
+
+
 
 /obj/structure/table/wood/narsie_act(total_override = TRUE)
 	if(!total_override)
 		..()
+
 
 /obj/structure/table/church
 	name = "stone table"
@@ -330,10 +338,8 @@
 	smooth = 0
 	climb_offset = 10
 
-/obj/structure/table/church/OnCrafted(dirin, user)
-	if(dirin == NORTH || dirin == SOUTH)
-		icon_state = "churchtable_mid"
-	. = ..()
+/obj/structure/table/church/crafted
+	icon_state = "stonetable_small"
 
 /obj/structure/table/church/m
 	icon = 'icons/roguetown/misc/tables.dmi'

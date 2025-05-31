@@ -207,6 +207,7 @@
 /datum/crafting_recipe/roguetown/hunting
 	tools = list(/obj/item/rogueweapon/huntingknife)
 	skillcraft = /datum/skill/craft/hunting
+	subtype_reqs = TRUE
 
 //Survival type crafting belongs here!
 //It no longer requires a structure

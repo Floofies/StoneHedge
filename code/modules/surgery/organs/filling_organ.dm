@@ -2,10 +2,10 @@
 	name = "self filling organ"
 
 	//self generating liquid stuff, dont use with absorbing stuff
-	var/storage_per_size = 10 //added per organ size
+	var/storage_per_size = 100 //added per organ size
 	var/datum/reagent/reagent_to_make = /datum/reagent/consumable/nutriment //naturally generated reagent
 	var/refilling = FALSE //slowly refills when not hungry
-	var/reagent_generate_rate = 0.1 //with refilling
+	var/reagent_generate_rate = 3 //with refilling
 	var/hungerhelp = FALSE //if refilling, absorbs reagent_to_make as nutrients if hungry. Conversion is to nutrients direct even if you brew poison in there.
 	var/uses_nutrient = TRUE //incase someone for some reason wanna make an OP paradox i guess.
 	var/organ_sizeable = FALSE //if organ can be resized in prefs etc, SET THIS RIGHT, IT'S IMPORTANT.
@@ -47,8 +47,7 @@
 	..()
 	//updates size caps
 	if(!issimple(H) && H.mind && organ_sizeable)
-		var/athletics = H.mind?.get_skill_level(/datum/skill/misc/athletics)
-		var/captarget = storage_per_size + (athletics * 6) + (storage_per_size * organ_size) // Updates the max_reagents in case the organ size changes
+		var/captarget = storage_per_size + (storage_per_size * organ_size) // Updates the max_reagents in case the organ size changes
 		if(damage)
 			captarget -= damage
 		if(contents.len)

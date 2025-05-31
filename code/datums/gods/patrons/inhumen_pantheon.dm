@@ -12,12 +12,12 @@
 	name = "Levishth"
 	domain = "God of Chaos and Lies; the great manipulator. He who covets power for the sake of power and nothing else."
 	desc = "Discovered long ago, Levisth gives power to the weak who do his bidding,elevating them in time. There are many tales of those who serve the greatsnake, all which eventuate with tales of how it yearns to gain power over all things, jealous of it's 'rivals' the other gods."
-	worshippers = "Power-Hungry, Powerful, Charismatic, Liers."
+	worshippers = "Power-Hungry, Powerful, Charismatic, Liars."
 	mob_traits = list(TRAIT_NASTY_EATER, TRAIT_SNEK, TRAIT_ZOMBIE_IMMUNE) //had to add zombie immune so as not to double dip when making the infection immune
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal_inhumen
 	t1 = /obj/effect/proc_holder/spell/invoked/eldritchhealing/any
-	t2 = /obj/effect/proc_holder/spell/invoked/raise_undead
-	t3 = /obj/effect/proc_holder/spell/invoked/strengthen_undead //wrong spell
+	t2 = /obj/effect/proc_holder/spell/invoked/projectile/lifesteal
+	t3 = /obj/effect/proc_holder/spell/invoked/strengthen_undead
 	t4 = /obj/effect/proc_holder/spell/invoked/revive_inhumen
 	confess_lines = list(
 		"Praisssse the Greatssssnake!!",

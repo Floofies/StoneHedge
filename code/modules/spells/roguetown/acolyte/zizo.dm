@@ -13,6 +13,7 @@
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
 	charge_max = 10 SECONDS
+	miscast_recharge = TRUE
 	miracle = TRUE
 	devotion_cost = 10
 
@@ -24,22 +25,15 @@
 		var/situational_bonus = 1
 		switch(user.patron.type)
 			if(/datum/patron/inhumen/levishth)
-				target.visible_message(span_info("shadow-like interwoven snakes lunge and dispere into [target]!"), span_notice("The shadows leave a chill, blood in my mouth -- yet I feel healed."))
+				target.visible_message(span_info("Shadow-like interwoven snakes lunge and dispere into [target]!"), span_notice("The shadows leave a chill, blood in my mouth -- yet I feel healed."))
 				// set up a ritual pile of bones (or just cast near a stack of bones whatever) around us for massive bonuses, cap at 50 for 75 healing total (wowie)
-				situational_bonus = 0
-				for (var/obj/item/stack/sheet/bone/O in oview(5, user))
+				for (var/obj/item/natural/bundle/bone/O in oview(5, user))
 					situational_bonus += (O.amount * 0.5)
-				if (situational_bonus > 0)
+				for (var/obj/item/natural/bone/B in oview(5, user))
+					situational_bonus += 0.5
+				if (situational_bonus > 1)
 					conditional_buff = TRUE
 					situational_bonus = min(situational_bonus, 5)
-			if(/datum/patron/divine/jayx)
-				target.visible_message(span_info("Blue Phoenix-Fires Envelop [target]!"), span_notice("The life around me pales as manna and the phoenix roar fills me. I am restored!"))
-				// if you've got lingering toxin damage, you get healed more, but your bonus healing doesn't affect toxin
-				var/toxloss = target.getToxLoss()
-				if (toxloss >= 10)
-					conditional_buff = TRUE
-					situational_bonus = 2.5
-					target.adjustToxLoss(situational_bonus) // remember we do a global toxloss adjust down below so this is okay
 			if(/datum/patron/inhumen/thief)
 				target.visible_message(span_info("Shadows unfurl outward and across [target] as their form is restored!"), span_notice("I'm bathed in a... strange holy light?"))
 				// COMRADES! WE MUST BAND TOGETHER!
@@ -58,7 +52,8 @@
 				target.visible_message(span_info("Raw energy in white and dark interwoven hews flow toward [target]."), span_notice("My wounds close without cause."))
 			else
 				target.visible_message(span_info("A choral sound comes from above and [target] is healed!"), span_notice("I am bathed in healing choral hymns!"))
-		var/healing = 2.5
+
+		var/healing = 3
 		if (conditional_buff)
 			to_chat(user, "Channeling my patron's power is easier in these conditions!")
 			healing += situational_bonus
@@ -67,6 +62,7 @@
 			var/mob/living/carbon/C = target
 			var/datum/status_effect/buff/healing/heal_effect = C.apply_status_effect(/datum/status_effect/buff/healing)
 			heal_effect.healing_on_tick = healing
+			target.blood_volume += BLOOD_VOLUME_SURVIVE/4
 		else
 			target.adjustBruteLoss(-healing*10)
 			target.adjustFireLoss(-healing*10)
@@ -74,7 +70,7 @@
 	return FALSE
 
 /obj/effect/proc_holder/spell/invoked/revive_inhumen
-	name = "Ressurection"
+	name = "Resurrection"
 	overlay_state = "revive"
 	releasedrain = 90
 	chargedrain = 0

@@ -222,10 +222,9 @@
 		/datum/sprite_accessory/tail/lizard/spikes,
 		/datum/sprite_accessory/tail/reverseredpanda,
 		)
-		
+
 /datum/customizer/organ/tail/tiefling
 	customizer_choices = list(/datum/customizer_choice/organ/tail/tiefling)
-	allows_disabling = FALSE
 
 /datum/customizer_choice/organ/tail/tiefling
 	name = "Tiefling Tail"

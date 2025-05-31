@@ -48,6 +48,14 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Jupon"
 	path = /obj/item/clothing/cloak/stabard/surcoat
 
+/datum/loadout_item/battle_skirt
+	name = "Battle Skirt"
+	path = /obj/item/clothing/cloak/fauld/battleskirt
+
+/datum/loadout_item/fauld
+	name = "Fauld"
+	path = /obj/item/clothing/cloak/fauld
+
 /datum/loadout_item/cape
 	name = "Cape"
 	path = /obj/item/clothing/cloak/cape
@@ -76,9 +84,17 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Wooden Dildo"
 	path = /obj/item/dildo/wood
 
-/datum/loadout_item/dildo
+/datum/loadout_item/plug
 	name = "Wooden Butt Plug"
 	path = /obj/item/dildo/plug/wood
+
+/datum/loadout_item/dildoglass
+	name = "Glass Dildo"
+	path = /obj/item/dildo/glass
+
+/datum/loadout_item/plugglass
+	name = "Glass Butt Plug"
+	path = /obj/item/dildo/plug/glass
 
 /datum/loadout_item/gladiator
 	name = "Leather Soleae"
@@ -203,12 +219,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Divine symbol"
 	path = /obj/item/clothing/neck/roguetown/psicross
 
-//ARMORS
-//HEAD
-/datum/loadout_item/lhelmet
-	name = "Leather Helmet"
-	path = /obj/item/clothing/head/roguetown/helmet/leather
-
 /datum/loadout_item/tricorn
 	name = "Tricorn"
 	path =	/obj/item/clothing/head/roguetown/helmet/tricorn
@@ -217,76 +227,10 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Bandana"
 	path =	/obj/item/clothing/head/roguetown/helmet/bandana
 
-/datum/loadout_item/ihelmet
-	name = "Iron Helmet"
-	path = /obj/item/clothing/head/roguetown/helmet/skullcap
-
-//FACE
-/datum/loadout_item/ironmask
-	name = "Iron Mask"
-	path = /obj/item/clothing/mask/rogue/facemask
-
-//NECK
-/datum/loadout_item/ironcoif
-	name = "Iron Coif"
-	path = /obj/item/clothing/neck/roguetown/chaincoif/iron
-
-/datum/loadout_item/irongorget
-	name = "Iron Gorget"
-	path = /obj/item/clothing/neck/roguetown/gorget
 
 /datum/loadout_item/cursed_collar
 	name = "Cursed Collar"
 	path = /obj/item/clothing/neck/roguetown/cursed_collar
-
-//ARMS
-/datum/loadout_item/lbracers
-	name = "Leather Bracers"
-	path = /obj/item/clothing/wrists/roguetown/bracers/leather
-
-/datum/loadout_item/ibracers
-	name = "Iron Couters"
-	path = /obj/item/clothing/wrists/roguetown/vambraces
-
-//CHEST
-/datum/loadout_item/iarmor
-	name = "Iron Chainmaille"
-	path =	/obj/item/clothing/suit/roguetown/armor/chainmail/iron
-
-/datum/loadout_item/gambeson
-	name = "Gambeson"
-	path =	/obj/item/clothing/suit/roguetown/armor/gambeson
-
-/datum/loadout_item/larmor
-	name = "Leather Armor"
-	path =	/obj/item/clothing/suit/roguetown/armor/leather
-
-/datum/loadout_item/harmor
-	name = "Hide Armor"
-	path =	/obj/item/clothing/suit/roguetown/armor/leather/hide
-
-//HANDS
-/datum/loadout_item/lgloves
-	name = "Heavy Leather Gloves"
-	path = /obj/item/clothing/gloves/roguetown/leather/angle
-
-/datum/loadout_item/igloves
-	name = "Iron Chain Gloves"
-	path =	/obj/item/clothing/gloves/roguetown/chain/iron
-
-//LEGS
-/datum/loadout_item/clegs
-	name = "Iron Chausses"
-	path = /obj/item/clothing/under/roguetown/chainlegs/iron
-
-/datum/loadout_item/istockings
-	name = "Iron Fishnets"
-	path = /obj/item/clothing/under/roguetown/chainlegs/iron/fishnet
-
-//FEET
-/datum/loadout_item/iboots
-	name = "Iron Boots"
-	path =	/obj/item/clothing/shoes/roguetown/boots/armoriron
 
 /datum/loadout_item/pipe
 	name = "Westman Pipe"
@@ -341,12 +285,3 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/lantern
 	name = "Lamptern"
 	path = /obj/item/flashlight/flare/torch/lantern
-
-/datum/loadout_item/chainkini
-	name = "chainkini"
-	path = /obj/item/clothing/suit/roguetown/armor/chainmail/bikini
-
-
-/datum/loadout_item/bikini
-	name = "leatherkini"
-	path = /obj/item/clothing/suit/roguetown/armor/leather/bikini

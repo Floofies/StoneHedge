@@ -205,6 +205,10 @@
 	seed_identity = "red mushroom spores"
 	plant_def_type = /datum/plant_def/amanita
 
+/obj/item/seeds/logbush
+	seed_identity = "druid-bush seeds"
+	plant_def_type = /datum/plant_def/logbush
+
 /obj/item/seeds/random
 	name = "mystery seeds"
 	seed_identity = "unknown seeds"

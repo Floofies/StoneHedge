@@ -488,3 +488,17 @@
 	produce_time = 2 MINUTES
 	weed_immune = TRUE
 	can_grow_underground = TRUE
+
+/datum/plant_def/logbush
+	name = "druid-bush"
+	icon = 'modular_stonehedge/icons/roguetown/misc/crops.dmi'
+	icon_state = "tobacco"
+	produce_type = /obj/item/grown/log/tree/small // Doesn't produce anything to make seeds out of. If you kill it, you're going to have to make the seeds by hand
+	uproot_loot = list(/obj/item/grown/log/tree/small)
+	perennial = TRUE
+	produce_amount_min = 1
+	produce_amount_max = 3
+	maturation_nutrition = 60
+	produce_nutrition =  30
+	maturation_time = 6 MINUTES
+	produce_time = 3 MINUTES

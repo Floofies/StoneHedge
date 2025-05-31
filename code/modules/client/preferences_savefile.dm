@@ -350,6 +350,18 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if (loadout_type)
 		loadout = new loadout_type()
 
+/datum/preferences/proc/_load_loadout2(S)
+	var/loadout_type2
+	S["loadout2"] >> loadout_type2
+	if (loadout_type2)
+		loadout2 = new loadout_type2()
+
+/datum/preferences/proc/_load_loadout3(S)
+	var/loadout_type3
+	S["loadout3"] >> loadout_type3
+	if (loadout_type3)
+		loadout3 = new loadout_type3()
+
 /datum/preferences/proc/_load_appearence(S)
 	S["real_name"]			>> real_name
 	S["gender"]				>> gender
@@ -409,6 +421,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	_load_statpack(S)
 
 	_load_loadout(S)
+	_load_loadout2(S)
+	_load_loadout3(S)
 
 	if(!S["features["mcolor"]"] || S["features["mcolor"]"] == "#000")
 		WRITE_FILE(S["features["mcolor"]"]	, "#FFF")
@@ -688,7 +702,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		WRITE_FILE(S["loadout"] , loadout.type)
 	else
 		WRITE_FILE(S["loadout"] , null)
-
+	if(loadout2)
+		WRITE_FILE(S["loadout2"] , loadout2.type)
+	else
+		WRITE_FILE(S["loadout2"] , null)
+	if(loadout3)
+		WRITE_FILE(S["loadout3"] , loadout3.type)
+	else
+		WRITE_FILE(S["loadout3"] , null)
 	save_vore_prefs(S)
 
 	WRITE_FILE(S["flavor_text"] , flavor_text)

@@ -570,9 +570,26 @@
 	verbage = "constructs"
 	skillcraft = /datum/skill/craft/carpentry
 
+/datum/crafting_recipe/roguetown/structure/tablemoss
+	name = "wooden table - mossy"
+	result = /obj/structure/table/wood/craftedmoss
+	reqs = list(/obj/item/grown/log/tree/small = 1)
+	verbage_simple = "construct"
+	verbage = "constructs"
+	skillcraft = /datum/skill/craft/carpentry
+
+/datum/crafting_recipe/roguetown/structure/tableslab
+	name = "wooden table - slab"
+	result = /obj/structure/table/wood/craftedslab
+	reqs = list(/obj/item/grown/log/tree/small = 1)
+	verbage_simple = "construct"
+	verbage = "constructs"
+	skillcraft = /datum/skill/craft/carpentry
+
+
 /datum/crafting_recipe/roguetown/structure/stonetable
 	name = "stone table"
-	result = /obj/structure/table/church
+	result = /obj/structure/table/church/crafted
 	reqs = list(/obj/item/natural/stone = 1)
 	verbage_simple = "build"
 	verbage = "builds"

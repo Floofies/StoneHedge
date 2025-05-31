@@ -8,14 +8,13 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = 'sound/magic/heal.ogg'
-	invocation_type = "none"
+	invocation = "'s hands glow with divine light."
+	invocation_type = "emote"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
 	charge_max = 10 SECONDS
 	miscast_recharge = TRUE
 	miracle = TRUE
-	invocation = "'s hands glow with divine light."
-	invocation_type = "emote"
 	devotion_cost = 10
 
 /obj/effect/proc_holder/spell/invoked/lesser_heal/cast(list/targets, mob/living/user)
@@ -113,6 +112,14 @@
 				if (HAS_TRAIT(user, TRAIT_PACIFISM))
 					conditional_buff = TRUE
 					situational_bonus += 1.5
+			if(/datum/patron/divine/jayx)
+				target.visible_message(span_info("Blue Phoenix-Fires Envelop [target]!"), span_notice("The life around me pales as manna and the phoenix roar fills me. I am restored!"))
+				// if you've got lingering toxin damage, you get healed more, but your bonus healing doesn't affect toxin
+				var/toxloss = target.getToxLoss()
+				if (toxloss >= 10)
+					conditional_buff = TRUE
+					situational_bonus = 2.5
+					target.adjustToxLoss(situational_bonus) // remember we do a global toxloss adjust down below so this is okay
 			if(/datum/patron/godless)
 				target.visible_message(span_info("Raw energy in white and dark interwoven hews flow toward [target]."), span_notice("My wounds close without cause."))
 			else

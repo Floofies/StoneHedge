@@ -32,15 +32,15 @@
 			target.heal_overall_damage(150, 150, updating_health = TRUE)
 			target.visible_message(span_danger("[target] reforms under the vile energy!"), span_notice("I'm remade by dark magic!"))
 			return TRUE
-/*
+
 		target.visible_message(span_info("Necrotic energy floods over [target]!"), span_userdanger("I feel colder as the dark energy floods into me!"))
 		if(iscarbon(target))
 			target.emote("scream")
-			target.Stun(20)
+			target.Stun(10)
 		else
 			target.adjustBruteLoss(20)
 		return TRUE
-*/
+
 	return FALSE
 
 /obj/effect/proc_holder/spell/invoked/eyebite
@@ -397,8 +397,8 @@
 			if(minion.mastermob != user) //if you are not lich and you are not master of this mob, skip.
 				continue
 			commanded ++
-			if(commanded >= 4) //shouldnt allow commanding more than 3 minions per cast, atleast makes it inconvenient to get a party of 10 skeletons to go do bad shit. I'm too lazy to make an entire system for keeping track of minions.
-				to_chat(user, span_necrosis("I can't easily control more than three undead at once."))
+			if(commanded > max(1,user.mind.get_skill_level(/datum/skill/magic/blood))) // Makes your army size dependant on your blood magic skill, with a minimum of one.
+				to_chat(user, span_necrosis("I can't easily control more than [user.mind.get_skill_level(/datum/skill/magic/blood)] undead at once."))
 				return
 		if(minion == targets[1] && minion.mastermob == user)
 			minion.aggressive = !minion.aggressive

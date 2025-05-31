@@ -20,6 +20,7 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 		if(/datum/patron/inhumen/levishth)
 			neck = /obj/item/clothing/neck/roguetown/psicross/skull
+			H.mind.adjust_skillrank_up_to(/datum/skill/magic/blood, 2, TRUE)
 		if(/datum/patron/divine/lune)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 		if(/datum/patron/divine/sylvarn)
