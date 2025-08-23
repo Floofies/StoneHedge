@@ -14,7 +14,7 @@
 	weather_sound = 'sound/ambience/rain.ogg'
 	weather_alpha = 100
 
-	probability = 3
+	probability = 5
 
 	end_duration = 5 SECONDS
 	end_message = ""

@@ -23,7 +23,7 @@
 	scale_vol_with_severity = TRUE
 	weather_sounds = list(/datum/looping_sound/rain)
 	indoor_weather_sounds = list(/datum/looping_sound/indoor_rain)
-	weather_messages = list("The rain makes me shiver a little.")
+	weather_messages = list("The rain makes me shiver a little. I could use something to keep warm and dry.")
 
 	minSeverity = 1
 	maxSeverity = 15
@@ -52,7 +52,7 @@
 
 /datum/particle_weather/rain_storm
 	name = "Rain storm"
-	desc = "Heavy rain, la la description."
+	desc = "Heavy rain, reminds you of those times you couldn't help but cry. pure and yet so hard to graspe.."
 	particleEffectType = /particles/weather/rain
 
 	scale_vol_with_severity = TRUE

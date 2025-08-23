@@ -5958,6 +5958,10 @@
 /obj/item/chair/rogue,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/under/cavewet)
+"CC" = (
+/obj/structure/flora/roguegrass/maneater/real,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
 "CD" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/dirt/road,
@@ -7445,6 +7449,10 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cavewet)
+"JT" = (
+/obj/structure/flora/roguetree/evil,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "JV" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/rogue/blocks,
@@ -9206,15 +9214,7 @@
 	first_time_text = null
 	})
 "Ss" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -16
-	},
-/obj/structure/flora/newbranch/leafless{
-	dir = 8
-	},
-/obj/structure/flora/newbranch/leafless{
-	dir = 4
-	},
+/obj/structure/flora/roguegrass/maneater/real,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "St" = (
@@ -10059,7 +10059,8 @@
 /area/rogue/under/cavewet)
 "Wm" = (
 /obj/structure/fluff/signage{
-	name = "STONEHEDGE - NORTH"
+	name = "STONEHEDGE - NORTH";
+	desc = "THIS.. WAY.."
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
@@ -11759,7 +11760,7 @@ Mo
 Bx
 RW
 Mo
-rq
+JT
 Mo
 rq
 ya
@@ -12962,7 +12963,7 @@ PM
 XA
 rq
 rq
-rq
+JT
 RW
 fj
 fj
@@ -13784,7 +13785,7 @@ rq
 Mo
 rq
 rq
-rq
+JT
 WS
 oW
 Sp
@@ -13792,7 +13793,7 @@ wg
 xV
 lb
 Sl
-rq
+JT
 rq
 wg
 yo
@@ -14416,9 +14417,9 @@ lT
 MT
 MT
 RW
-Ss
+cN
 yE
-lV
+CC
 Zc
 Bx
 lV
@@ -14581,7 +14582,7 @@ cz
 rJ
 vZ
 Ru
-rq
+JT
 RW
 Mo
 Mo
@@ -15197,7 +15198,7 @@ rq
 RW
 RW
 RW
-rq
+JT
 It
 Bx
 Bx
@@ -15387,7 +15388,7 @@ RW
 Bx
 RW
 rq
-rq
+JT
 rq
 rq
 rq
@@ -15630,7 +15631,7 @@ yE
 Aw
 lV
 rq
-yE
+Ss
 yE
 Bx
 nA
@@ -15813,12 +15814,12 @@ ic
 RW
 Bx
 yE
-rq
+JT
 yE
 rq
 rq
 yE
-yE
+Ss
 yE
 rq
 yE
@@ -16015,7 +16016,7 @@ Ej
 Bx
 Bx
 yE
-yE
+Ss
 rq
 RW
 RW
@@ -16180,7 +16181,7 @@ lV
 bl
 fj
 fj
-rq
+JT
 rq
 Mo
 Mo
@@ -16244,10 +16245,10 @@ eg
 lV
 Bx
 Bx
+Ss
 yE
 yE
-yE
-yE
+Ss
 nA
 nA
 nA
@@ -16817,7 +16818,7 @@ RW
 im
 WJ
 gk
-yE
+Ss
 lV
 Zc
 Zc
@@ -16841,7 +16842,7 @@ rq
 yE
 Aw
 RW
-yE
+Ss
 rq
 wR
 RW
@@ -16856,7 +16857,7 @@ Bx
 nA
 nA
 nA
-yE
+Ss
 yE
 nA
 nA
@@ -17213,7 +17214,7 @@ iE
 SK
 iE
 Bx
-rq
+JT
 RW
 Ph
 qS
@@ -17223,7 +17224,7 @@ Ph
 yE
 yE
 Aw
-lV
+CC
 Zc
 yE
 rq
@@ -17234,7 +17235,7 @@ Wh
 yE
 yE
 Kj
-yE
+Ss
 Kj
 eZ
 eZ
@@ -17458,7 +17459,7 @@ RW
 RW
 Zc
 wR
-yE
+Ss
 yE
 Bx
 Bx
@@ -17805,7 +17806,7 @@ lV
 nA
 wR
 Bx
-rq
+JT
 rq
 rq
 yE
@@ -17835,7 +17836,7 @@ Zc
 Zc
 Zc
 yE
-lV
+CC
 ET
 nA
 nA
@@ -17865,7 +17866,7 @@ Zc
 Zc
 lV
 eg
-yE
+Ss
 yE
 Aw
 yE
@@ -18070,7 +18071,7 @@ eg
 yE
 Aw
 yE
-yE
+Ss
 Aw
 fj
 fj
@@ -18231,7 +18232,7 @@ lV
 gk
 yE
 yE
-yE
+Ss
 lV
 Zc
 yE
@@ -18445,7 +18446,7 @@ RK
 RW
 RW
 Bx
-yE
+Ss
 Kj
 Kj
 Kj
@@ -18669,7 +18670,7 @@ Bx
 Bx
 rq
 eg
-yE
+Ss
 Zc
 nA
 wR
@@ -18850,7 +18851,7 @@ yE
 yE
 yE
 rq
-rq
+JT
 Bx
 Bx
 Bx
@@ -18858,7 +18859,7 @@ nA
 nA
 Mo
 Aw
-yE
+Ss
 eg
 yE
 rq
@@ -19478,7 +19479,7 @@ yE
 RW
 RW
 RW
-yE
+Ss
 Bx
 Bx
 yE
@@ -19623,7 +19624,7 @@ TU
 xh
 Lf
 Mo
-rq
+JT
 rq
 iE
 wg
@@ -19676,7 +19677,7 @@ yE
 RW
 rq
 Mo
-yE
+Ss
 RW
 RW
 rq
@@ -19855,7 +19856,7 @@ nA
 Bx
 rq
 rq
-rq
+JT
 RW
 RW
 RW
@@ -19884,7 +19885,7 @@ RW
 nA
 yE
 yE
-yE
+Ss
 rq
 Mo
 Mo
@@ -20243,7 +20244,7 @@ Bx
 RW
 nA
 yE
-rq
+JT
 rq
 rq
 yE
@@ -20456,7 +20457,7 @@ MI
 Bx
 Bx
 yE
-rq
+JT
 rq
 yE
 Mo

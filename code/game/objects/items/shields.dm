@@ -1,3 +1,5 @@
+
+
 /obj/item/shield
 	name = "shield"
 	icon = 'icons/obj/shields.dmi'

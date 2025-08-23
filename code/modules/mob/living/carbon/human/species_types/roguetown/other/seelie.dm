@@ -7,7 +7,7 @@
 	id = "seelie"
 	desc = "<b>Seelie</b><br>\
 	The smallest of Fae-folk, Seelie are a mysterious race and not well understood. \
-    Parentless creatures and apparently only feminine in nature, it is clear that they do not propogate in a typical human way. \
+    Parentless creatures and diverse in nature; it is clear that they do not propogate in a typical mortal way of life. \
     Instead, Seelie tend to appear and gather in places of innate magic, thriving in such an environments. \
     Seelie are known to have Elemental Attunements, an influence of nature that mystically sprung them into existance. \
     Any tribalism or history regarding the race is scarce and uncommmon, and as such misconception and myth surrounds them. \
