@@ -365,6 +365,10 @@
 	},
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/under/cavewet)
+"bM" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/spider,
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors)
 "bN" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/spacevine/dendor,
@@ -2041,6 +2045,11 @@
 /area/rogue/outdoors/town/sargoth{
 	first_time_text = "Arcadia"
 	})
+"kb" = (
+/obj/structure/spacevine/dendor,
+/obj/effect/wisp,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "kc" = (
 /obj/effect/mob_spawner/skeleton/lich,
 /turf/open/floor/rogue/grasscold,
@@ -3434,7 +3443,6 @@
 	first_time_text = "Arcadia"
 	})
 "qJ" = (
-/obj/effect/spawner/roguemap/hauntpile,
 /obj/item/reagent_containers/food/snacks/crow{
 	dir = 8
 	},
@@ -4274,6 +4282,11 @@
 /area/rogue/outdoors/town/sargoth{
 	first_time_text = "Arcadia"
 	})
+"uD" = (
+/obj/structure/flora/grass/jungle/b,
+/obj/effect/wisp,
+/turf/open/floor/rogue/grasscold,
+/area/rogue/outdoors)
 "uE" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/brain_gusher_beast{
 	name = "DREAM EATER"
@@ -4289,6 +4302,10 @@
 /obj/structure/bed/rogue/inn/double,
 /turf/open/floor/rogue/carpet,
 /area/rogue/under/cavewet)
+"uH" = (
+/obj/effect/wisp,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors)
 "uJ" = (
 /obj/structure/flora/roguegrass/bush/wall{
 	icon_state = "winterbush4"
@@ -5200,6 +5217,11 @@
 /obj/item/roguegem/violet,
 /turf/open/floor/rogue/volcanic,
 /area/rogue/under/cavewet)
+"zd" = (
+/obj/structure/flora/grass/jungle/b,
+/obj/effect/wisp,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "ze" = (
 /obj/structure/flora/roguegrass/fungus_bush{
 	icon_state = "fungus_bush3"
@@ -9307,6 +9329,12 @@
 /area/rogue/outdoors/town/sargoth{
 	first_time_text = "Arcadia"
 	})
+"Si" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/spider,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/under/cavewet)
 "Sk" = (
 /obj/structure/roguewindow/stained/silver,
 /turf/open/floor/rogue/church,
@@ -10693,6 +10721,12 @@
 /obj/item/roguegem/blue,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/under/cavewet)
+"YP" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/spider,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/outdoors)
 "YQ" = (
 /obj/structure/flora/wildplant/wild_poppy,
 /turf/open/floor/rogue/grass,
@@ -12850,7 +12884,7 @@ qx
 RD
 FW
 FW
-wY
+bM
 vI
 VS
 FW
@@ -12970,7 +13004,7 @@ FW
 wY
 wY
 vI
-wY
+bM
 wY
 TJ
 Px
@@ -13383,7 +13417,7 @@ RD
 QP
 tH
 Nw
-jr
+zd
 jh
 EO
 jh
@@ -13565,7 +13599,7 @@ EO
 Bo
 DN
 DN
-Jq
+uD
 jr
 JC
 JC
@@ -13756,7 +13790,7 @@ be
 Gp
 JK
 Gi
-eq
+kb
 eq
 JK
 Vf
@@ -15494,7 +15528,7 @@ xD
 DN
 jh
 jr
-jh
+jS
 Og
 Bj
 jh
@@ -16350,7 +16384,7 @@ Ox
 Vf
 Qw
 Qw
-Qw
+uH
 cU
 tC
 tT
@@ -24443,7 +24477,7 @@ Xk
 Xk
 Nh
 Pw
-XG
+YP
 tC
 Xk
 Xk
@@ -24619,7 +24653,7 @@ Xk
 Xk
 Xk
 XG
-XG
+YP
 Nu
 tC
 Xk
@@ -25327,7 +25361,7 @@ Xk
 ec
 gU
 ZN
-XG
+YP
 Pw
 XG
 gU
@@ -25506,7 +25540,7 @@ gU
 XG
 Pw
 XG
-XG
+YP
 tC
 Xk
 Xk
@@ -26095,7 +26129,7 @@ Xk
 xQ
 HS
 Mj
-HS
+Si
 tT
 tT
 Xk
@@ -26270,7 +26304,7 @@ Xk
 Xk
 tT
 tT
-HS
+Si
 HS
 eL
 tT
